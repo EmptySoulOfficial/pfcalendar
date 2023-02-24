@@ -1,11 +1,12 @@
+@import './components/assets/css/themes/defaultDark/defaultDark.css';
+
 .App {
-  text-align: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: var(--color-main);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -14,8 +15,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  min-height: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,6 +26,10 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.App-Container {
+  padding: 20px;
 }
 
 @keyframes App-logo-spin {

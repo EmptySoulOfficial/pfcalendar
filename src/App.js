@@ -1,26 +1,23 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
+import MainWindow from './components/content/windows/MainWindow/MainWindow';
 
-import ELanguage from './assets/ELanguage/ELanguage.jsx'
+import ELanguage from './components/assets/js/ELanguage/ELanguage.jsx'
 
 function App() {
   const eLang = ELanguage()
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload. {eLang.test}
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        Header {eLang.test}
+        <div className="Search-Container">
+            Wer ist heute da?
+            </div>
       </header>
+      <div className="App-Container">
+        <MainWindow />
+      </div>
+      
     </div>
   );
 }
