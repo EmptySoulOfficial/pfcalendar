@@ -1,9 +1,23 @@
 {"de":{
-    "test": "TestText Deutsch"
+    "test": "TestText Deutsch",
+    "Monday": "MO",
+    "Tuesday": "DI",
+    "Wednesday": "MI",
+    "Thursday": "DO",
+    "Friday": "FR",
+    "Saturday": "SA",
+    "Sunday": "SO"
     
  },
  "en":{
-  "test": "Testtext English"
+  "test": "Testtext English",
+  "Monday": "MON",
+  "Tuesday": "TUE",
+  "Wednesday": "WED",
+  "Thursday": "THU",
+  "Friday": "FRI",
+  "Saturday": "SAT",
+  "Sunday": "SUN"
 
   }
 }

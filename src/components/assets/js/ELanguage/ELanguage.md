@@ -1,12 +1,12 @@
 #ELanguage by Empty Soul
-## V 1.2 REACT
+## V 2.0 REACT
 
 ## How to import
-import ELanguage from '<UR PATH>/ELanguage/ELanguage.jsx'
+import { getLang, getLangVarable } from '<UR PATH>/ELanguage/ELanguage.jsx'
 
 Inside your function:
 
-const eLang = ELanguage()
+const eLang = getLang()
 
 ## How to use
 
@@ -14,6 +14,25 @@ const eLang = ELanguage()
 
 example:
 <p className="this_is_a_translated_text">{eLang.test}</p>
+
+## How to use inside constructor
+
+example:
+
+constructor() {
+    super();
+
+    let eLang = getLang(); //set eLang
+    this.weekdays = [eLang.test]; //put translated text inside object
+}
+
+inside render return:
+    render() 
+        {
+            return(
+<h1>{getLangVar('test')}</h1> // use exported getlangVar
+        )
+    }
 
 ## Infos
 You have to make every translation as string in the json (lan/lang.json) first.

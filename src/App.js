@@ -1,11 +1,12 @@
 //import logo from './logo.svg';
 import './App.css';
-import MainWindow from './components/content/windows/MainWindow/MainWindow';
+import Calendar from './components/content/calendar/Calendar';
 
-import ELanguage from './components/assets/js/ELanguage/ELanguage.jsx'
+import { getLang } from './components/assets/js/ELanguage/ELanguage.js'
+// import TestCalendar from './components/content/windows/testCalendar/TestCalendar';
 
 function App() {
-  const eLang = ELanguage()
+  const eLang = getLang()
   return (
     <div className="App">
       <header className="App-header">
@@ -15,7 +16,7 @@ function App() {
             </div>
       </header>
       <div className="App-Container">
-        <MainWindow />
+        <Calendar />
       </div>
       
     </div>

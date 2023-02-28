@@ -1,28 +1,38 @@
-import './MainWindow.css'
-import DayBox from '../../modules/DayBox/DayBox'
+import React, {Component} from 'react';
+import './Calendar.css'
+import DayBox from '../modules/DayBox/DayBox';
+import { getLang, getLangVar } from '../../assets/js/ELanguage/ELanguage';
 
-function MainWindow() {
-    return(
-        
+
+
+export default class Calendar extends Component {
+    constructor() {
+        super();
+   
+        let eLang = getLang();
+        this.weekdays = [eLang.Monday, eLang.Tuesday, eLang.Wednesday, eLang.Thursday, eLang.Friday, eLang.Saturday, eLang.Sunday];
+        this.months = ['January', 'February', 'March', 'April', 'May', 'June',
+          'July', 'August', 'September', 'October', 'November', 'December'];
+    
+        this.state = {
+          currentDay: new Date()
+        }
+      }
+
+      
+    render() 
+        {
+            return(
         <div className="MainWindow">
-            <div>
-            
-            </div>
+
+        {getLangVar('Monday')}
             <div className="MainWindow-Month-Container">
-                <button className="Month-Button-Back">x</button><h1>JANUAR</h1><button className="Month-Button-Back">x</button>
-            </div>
-            <div className="MainWindow-Search-Container">
-            Wer ist heute da?
+                <button className="Month-Button-Back">x</button><h1>JANUAR { getLangVar('Monday')}</h1><button className="Month-Button-Back">x</button>
             </div>
             <div className="MainWindow-Calendar-Container">
                 <div className="MainWindow-Calendar-Days-Container">
-                    <p className="Day-Label">MO</p>
-                    <p className="Day-Label">DI</p>
-                    <p className="Day-Label">MI</p>
-                    <p className="Day-Label">DO</p>
-                    <p className="Day-Label">FR</p>
-                    <p className="Day-Label">SA</p>
-                    <p className="Day-Label">SO</p>
+                {this.weekdays.map(w => <p key={w} className="Day-Label">{w}</p>)}
+                
                 </div>
             <div className="MainWindow-Calendar">
                 < DayBox />
@@ -75,10 +85,8 @@ function MainWindow() {
             
 
         </div>
-        
     
-    
-    );
-   
+    )
+    } 
+
 }
-export default MainWindow
