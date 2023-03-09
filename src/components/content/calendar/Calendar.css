@@ -1,44 +1,60 @@
-@import '../../assets/css/themes/defaultDark/defaultDark.css';
+@import '../../assets/css/themes/theme.css';
 
-.MainWindow {
+.MainWindow-Calendar {
     width: 100%;
     height: 100%;
-    height: calc(100vh - 200px);
+    height: calc(100vh - 100px);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: column;
 }
 
+.MainWindow-Headline-Container {
+    width: 100%;
+    display: flex;
+    max-width: 1200px;
+    height: 80px;
+}
+
 .MainWindow-Month-Container {
     color: #ffffff;
     display: flex;
     align-items: center;
+    padding-left: 200px;
+    z-index: 40;
 }
 
 .MainWindow-Calendar-Container {
     background-color: #0b2936;
-    border-radius: 20px;
+    border-radius: var(--borderradius-default);
     overflow: hidden;
     width: 100%;
     max-width: 1200px;
     box-shadow: #00000024 -1px 18px 60px 5px;
+    z-index: 50;
 }
 
-.MainWindow-Calendar{
+.MainWindow-Calendar-Days{
     width: 100%;
     max-width: 1200px;
-    height: calc(100% - 50px);
-    padding-bottom: 100px;
+    height: calc(100vh - 50px);
     border-radius: 20px;
     display: grid;
     flex-flow: wrap;
     overflow-y: scroll;
     scroll-snap-type: y proximity;
-    grid-template-columns: auto auto auto auto auto auto auto;
+    grid-auto-columns: 1fr;
+    grid-template-columns: repeat(7, 1fr); 
 }
 
 .MainWindow-Calendar-Days-Container {
+    height: calc(100% - 50px);
+    border-radius: 20px;
+    overflow-y: scroll;
+}
+
+.MainWindow-Calendar-Week-Container {
     width: 100%;
     display: grid;
     flex-flow: wrap;
@@ -50,4 +66,75 @@
     width: auto;
     text-align: center;
     color: #46798f;
+    font-family: 'Roboto', sans-serif;
+}
+
+.Calendar-Year-Label {
+    font-size: 140PX;
+    font-weight: bold;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    z-index: 0;
+    color: #0f4450;
+    position: absolute;
+    margin-top: -35px;
+    opacity: 0.5;
+}
+
+.Menu-Container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 20px;
+}
+
+.Menu {
+    width: 40px;
+    height: 40px;
+    padding-top: 4px;
+    transition: 0.3s;
+}
+
+.Menu :hover{
+    cursor: pointer;
+    fill: #57f2be;
+}
+
+.CurrentDate-Text{
+    width: 200px;
+    color: #33667b;
+    font-size: 29px;
+    margin-block-end: 0;
+    margin-block-start: 0;
+    font-weight: bold;
+}
+
+.Button-Month-Back{
+    border: 0;
+    width: 40px;
+    height: 40px;
+    transition: 0.3s;
+}
+
+.Button-Month-Back:hover .icon{
+fill: #57f2be;
+}
+
+.Button-Month-For{
+    border: 0;
+    width: 40px;
+    height: 40px;
+    transition: 0.3s;
+}
+
+.Button-Month-For:hover .icon{
+fill: #57f2be;
+}
+
+.Button-Month-Today{
+    border: 0;
+    width: 60px;
+    height: 40px;
+    color: #fefefe;
 }

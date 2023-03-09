@@ -20,7 +20,6 @@ function CalendarDays(props) {
           selected: (firstDayOfMonth.toDateString() === props.day.toDateString()),
           year: firstDayOfMonth.getFullYear()
         }
-    
         currentDays.push(calendarDay);
       } 
   

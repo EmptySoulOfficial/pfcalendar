@@ -4,6 +4,7 @@ import Calendar from './components/content/calendar/Calendar';
 
 import { getLang } from './components/assets/js/ELanguage/ELanguage.js'
 // import TestCalendar from './components/content/windows/testCalendar/TestCalendar';
+//import LogIn from './components/content/start/LogIn.jsx'
 
 function App() {
   const eLang = getLang()
@@ -11,9 +12,6 @@ function App() {
     <div className="App">
       <header className="App-header">
         Header {eLang.test}
-        <div className="Search-Container">
-            Wer ist heute da?
-            </div>
       </header>
       <div className="App-Container">
         <Calendar />

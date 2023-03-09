@@ -1,10 +1,12 @@
 
 .DayBox {
     width: auto;
-    height: 180px;
+    min-height: 140px;
     margin:0px;
     border: 1px solid #0f4450;
-    background-color: #073a4a;
+    /* background-color: #073a4a; */
+    background-color: #104450;
+    transition: 0.3s;
 }
 
 .DayBox-Head {
@@ -17,9 +19,10 @@
 }
 
 .DateNumber {
-    color: #007bff;
+    color: #1e4e66;   
     font-weight: bold;
     font-size: 30px;
+    user-select: none;
 }
 
 .DayBox-MainContainer {
@@ -43,11 +46,13 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 4px;
+    opacity: 0.3;
 }
 .DayBox-Entry-Name{
-    padding-left: 10px;
+    padding-left: 8px;
     margin-block-start: 0;
     margin-block-end: 0;
+    user-select:none;
 }
 
 .DayBox-Entry-Status {
@@ -55,7 +60,64 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5px;
+    padding: 2px;
     width: 20px;
     height: 20px;
+}
+
+.DayBox-CurrentMonth{
+    font-size: 13px;
+    width: -webkit-fill-available;
+    text-align: left;
+    padding: 0px 10px;
+    color: #46798f;
+    user-select:none;
+}
+
+.DayBox-Entry:hover{
+    cursor: pointer;
+}
+
+.CurrentDay {
+    background-color: #073a4a;
+}
+
+.CurrentDay .DateNumber {
+    color: #46798f
+}
+
+.CurrentDay .DayBox-Entry {
+    opacity: 1;
+}
+
+.CurrentDay .DayBox-CurrentMonth {
+    opacity:0;
+}
+  
+.selected-today .DateNumber {
+    color: #57f2be;
+    font-weight: bold;
+}
+
+.selected-today {
+    border-bottom: 1px solid #57f2be;
+}
+
+.selected {
+    
+}
+
+.selected .DateNumber {
+    color: #ff4a9b;
+    font-weight: bold;
+}
+
+.icon-addsmooth{
+    fill: #46798f;
+    transition: 0.3s;
+}
+
+.icon-addsmooth:hover{
+    cursor: pointer;
+    fill: #57f2be;
 }
