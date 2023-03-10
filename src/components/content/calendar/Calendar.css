@@ -115,6 +115,7 @@
     width: 40px;
     height: 40px;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 .Button-Month-Back:hover .icon{
@@ -126,6 +127,7 @@ fill: #57f2be;
     width: 40px;
     height: 40px;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 .Button-Month-For:hover .icon{
@@ -137,4 +139,9 @@ fill: #57f2be;
     width: 60px;
     height: 40px;
     color: #fefefe;
+    cursor: pointer;
+}
+
+.Button-Month-Today:hover {
+    color: #57f2be;
 }

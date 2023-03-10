@@ -41,12 +41,14 @@ function DayBox(props) {
     currentDays.push(calendarDay);
   }
   return (
+    
     <>
       {currentDays.map((day) => {
         console.log(">"+day.date)
+
         return(
         <div key={day.number+"-"+dayidcounter++} className={"DayBox" + (day.currentMonth ? " CurrentDay" : "") + 
-                                                            (day.selected ? (day.date > currentDate ? " selected" : " selected-today") : "" )} 
+                                                            (day.selected ? (day.date.getFullYear() === currentDate.getFullYear() && day.date.getMonth() === currentDate.getMonth() && day.date.getDate() === currentDate.getDate() ? " selected-today" : " selected") : "" )} 
                                                             >
           <div className="DayBox-Head" onClick={() => {props.changeCurrentDay(day);}}>
             <div className="addButton" onClick={() => {alert('add')}}><Icon name="addsmooth" size="16" /></div>
@@ -58,13 +60,6 @@ function DayBox(props) {
               <p className="DayBox-Entry-Name">Steve Pietrowski</p>
               <div className="DayBox-Entry-Status">
                 <Icon name="home" size="16" />
-              </div>
-            </div>
-
-            <div className="DayBox-Entry">
-              <p className="DayBox-Entry-Name">Steve Pietrowski</p>
-              <div className="DayBox-Entry-Status">
-                <Icon name="test" size="16" />
               </div>
             </div>
           </div>
