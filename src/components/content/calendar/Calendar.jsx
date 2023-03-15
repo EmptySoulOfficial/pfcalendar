@@ -3,6 +3,7 @@ import './Calendar.css'
 import DayBox from '../modules/DayBox/DayBox';
 import { getLang, getLangVar } from '../../assets/js/ELanguage/ELanguage';
 import Icon from '../../assets/js/Icon/icon.asset';
+import AddBox from '../modules/AddBox/AddBox';
 
 
 
@@ -44,6 +45,7 @@ export default class Calendar extends Component {
         {
             return(
         <div className="MainWindow-Calendar">
+        <AddBox />
         <div className="MainWindow-Headline-Container">
           <p className="Calendar-Year-Label">{this.state.currentDay.getFullYear()}</p>
           <div className="MainWindow-Month-Container">

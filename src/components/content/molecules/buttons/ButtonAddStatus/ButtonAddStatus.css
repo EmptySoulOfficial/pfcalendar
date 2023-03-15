@@ -1,0 +1,37 @@
+.Button-AddStatus{
+    width: 100px;
+    height: 100px;
+    border: 2px solid #57f2be00;
+    border-radius: 20px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    transition: var(--transition-default);
+    color: #46798f;
+}
+
+.Button-AddStatus .icon {
+    width: 50px;
+    height: 50px;
+    fill: #46798f;
+}
+
+.Button-AddStatus:hover{
+    border-color: #fefefe;
+    color: #fefefe;
+}
+
+.Button-AddStatus:hover .icon{
+    fill: #fefefe;
+}
+
+.Button-AddStatus--active{
+    border-color: #57f2be;
+    color: #57f2be;
+}
+
+.Button-AddStatus--active .icon{
+    fill: #57f2be;
+}

@@ -1,0 +1,37 @@
+.AddBox{
+    position: absolute;
+    border-radius: 20px;
+    background-color: #0b2936;
+    z-index: 100;
+    padding:20px;
+}
+
+.AddBox-Container-Buttons{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.AddBox-Container-Dates {
+    display: flex;
+}
+
+.AddBox-Container-Notes {
+    display: flex;
+    justify-content: center;
+}
+
+.AddBox-Date-Input {
+    background-color: #1e4e66;
+    border: oldlace;
+    border-radius: 20px;
+    padding: 10px;
+    height: 16px;
+    color: #fefefe;
+}
+
+.AddBox-Date-Input:active, .AddBox-Date-Input:focus{
+    outline: 2px solid #57f2be;
+}
+

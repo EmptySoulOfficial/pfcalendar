@@ -39,3 +39,4 @@ You have to make every translation as string in the json (lan/lang.json) first.
 Then call the desired translated text as extention.
 You can also add new languages.
 Every not defined language will replaced with english.
+

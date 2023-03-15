@@ -4,7 +4,12 @@
     --color-main: var(--color-gray);
     --color-darker: #333333;
     --borderradius-default: 20px;
+    --transition-default: 0.3s;
    }
+
+ ::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
 
 div {
     font-family: 'Roboto', sans-serif;

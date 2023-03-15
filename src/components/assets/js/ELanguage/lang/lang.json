@@ -19,7 +19,13 @@
   "October": "Oktober", 
   "November": "November", 
   "December": "Dezember",
-  "Today": "Heute"
+  "Today": "Heute",
+  "Homeoffice": "Homeoffice",
+  "Vacation": "Urlaub",
+  "Professional_Development": "Weiterbildung",
+  "Ill": "Krank",
+  "from": "von",
+  "to": "bis"
     
  },
  "en":{
@@ -43,7 +49,13 @@
   "October": "October", 
   "November": "November", 
   "December": "December",
-  "Today": "Heute"
+  "Today": "Heute",
+  "Homeoffice": "Homeoffice",
+  "Vacation": "Vacation",
+  "Professional_Development": "Proffessional Development",
+  "Ill": "Ill",
+  "from": "from",
+  "to": "to"
 
   }
 }
