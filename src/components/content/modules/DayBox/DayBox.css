@@ -3,9 +3,9 @@
     width: auto;
     min-height: 140px;
     margin:0px;
-    border: 1px solid #0f4450;
+    border: 1px solid var(--color-tertiary);
     /* background-color: #073a4a; */
-    background-color: #104450;
+    background-color: var(--color-tertiary);
     transition: 0.3s;
 }
 
@@ -19,10 +19,11 @@
 }
 
 .DateNumber {
-    color: #1e4e66;   
+    color: var(--color-text);   
     font-weight: bold;
     font-size: 30px;
     user-select: none;
+    opacity: var(--opacity-nofocuse);
 }
 
 .DayBox-MainContainer {
@@ -34,59 +35,21 @@
     flex-direction: column;
 }
 
-.DayBox-Entry{
-    width: calc(100% - 20px);
-    
-    background-color: #1e4e66;
-    color: #fefefe;
-    border-radius: 6px;
-    overflow: hidden;
-    font-size: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 4px;
-    opacity: 0.3;
-}
-.DayBox-Entry-Name{
-    padding-left: 8px;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    user-select:none;
-}
-
-.DayBox-Entry-Status {
-    background-color: #970fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2px;
-    width: 20px;
-    height: 20px;
-}
-
 .DayBox-CurrentMonth{
     font-size: 13px;
     width: -webkit-fill-available;
     text-align: left;
     padding: 0px 10px;
-    color: #46798f;
+    color: var(--color-text);
     user-select:none;
 }
 
-.DayBox-Entry:hover{
-    cursor: pointer;
-}
-
 .CurrentDay {
-    background-color: #073a4a;
+    background-color: var(--color-primary);
 }
 
 .CurrentDay .DateNumber {
-    color: #46798f
-}
-
-.CurrentDay .DayBox-Entry {
+    color: var(--color-text);
     opacity: 1;
 }
 
@@ -95,29 +58,31 @@
 }
   
 .selected-today .DateNumber {
-    color: #57f2be;
+    color: var(--color-highlight);
     font-weight: bold;
 }
 
 .selected-today {
-    border-bottom: 1px solid #57f2be;
-}
-
-.selected {
-    
+    border: 1px solid var(--color-highlight);
 }
 
 .selected .DateNumber {
-    color: #ff4a9b;
+    color: var(--color-text-light);
     font-weight: bold;
+    transition: var(--transition-default);
+}
+
+.selected .DayBox-Head {
+    font-weight: bold;
+    transition: var(--transition-default);
 }
 
 .icon-addsmooth{
-    fill: #46798f;
+    fill: var(--color-text);
     transition: 0.3s;
 }
 
 .icon-addsmooth:hover{
     cursor: pointer;
-    fill: #57f2be;
+    fill: var(--color-highlight);
 }

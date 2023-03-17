@@ -24,8 +24,12 @@
   "Vacation": "Urlaub",
   "Professional_Development": "Weiterbildung",
   "Ill": "Krank",
+  "Absent": "Abwesend",
   "from": "von",
-  "to": "bis"
+  "to": "bis",
+  "Title__Add_Status": "Status hinzufügen",
+  "Placeholder__Add_Entry_Note":"Informationen an Kollegen",
+  "Save": "Speichern"
     
  },
  "en":{
@@ -52,10 +56,14 @@
   "Today": "Heute",
   "Homeoffice": "Homeoffice",
   "Vacation": "Vacation",
-  "Professional_Development": "Proffessional Development",
-  "Ill": "Ill",
+  "Professional_Development": "Training",
+  "Ill": "Sick Day",
+  "Absent": "Absent",
   "from": "from",
-  "to": "to"
+  "to": "to",
+  "Status__Add_Entry": "Status Entry",
+  "Placeholder__Add_Entry_Note":"Information to colleagues",
+  "Save": "Save"
 
   }
 }

@@ -4,9 +4,8 @@
   position: absolute;
   height: 100%;
   width: 100%;
-  background-color: var(--color-main);
+  background-color: var(--color-background);
 }
-
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

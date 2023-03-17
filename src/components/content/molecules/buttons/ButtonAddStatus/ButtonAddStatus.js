@@ -1,10 +1,10 @@
 import './ButtonAddStatus.css'
 import Icon from '../../../../assets/js/Icon/icon.asset'
 
-function ButtonAddStatus({label, icon, id, index}) {
+function ButtonAddStatus({label, icon, index}) {
 
     return(
-        <button className="Button-AddStatus" id={'button-addstatus_'+id}>
+        <button className="Button-AddStatus" id={'button-addstatus_'+index}>
             <Icon name={icon} />
             <p>{label}</p>
         </button>
