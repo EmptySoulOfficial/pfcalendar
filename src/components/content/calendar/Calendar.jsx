@@ -27,10 +27,11 @@ const Calendar = () => {
 
   const handleSetNextDay = () => {
     setCurrentDate(new Date(currentDate.setDate(32)))
+
   };
 
   const handleSetPreviousDay = () => {
-    setCurrentDate(new Date(currentDate.setDate(-31)))
+    setCurrentDate(new Date(currentDate.setDate(0)))
   };
 
   const handleSetCurrentDay = () => {
