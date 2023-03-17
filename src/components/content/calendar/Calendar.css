@@ -18,7 +18,7 @@
 }
 
 .MainWindow-Month-Container {
-    color: #ffffff;
+    color: var(--color-text-light);
     display: flex;
     align-items: center;
     padding-left: 200px;
@@ -26,12 +26,12 @@
 }
 
 .MainWindow-Calendar-Container {
-    background-color: #0b2936;
+    background-color: var(--color-secondary);
     border-radius: var(--borderradius-default);
     overflow: hidden;
     width: 100%;
     max-width: 1200px;
-    box-shadow: #00000024 -1px 18px 60px 5px;
+    box-shadow: var(--box-shadow-default);
     z-index: 50;
 }
 
@@ -58,7 +58,7 @@
     width: 100%;
     display: grid;
     flex-flow: wrap;
-    background-color: #0b2936;
+    background-color: var(--color-secondary);
     grid-template-columns: auto auto auto auto auto auto auto;
 }
 
@@ -103,7 +103,7 @@
 
 .CurrentDate-Text{
     width: 200px;
-    color: #33667b;
+    color: var(--color-text);
     font-size: 29px;
     margin-block-end: 0;
     margin-block-start: 0;

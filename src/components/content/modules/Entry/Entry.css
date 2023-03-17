@@ -1,9 +1,8 @@
 
 .Entry{
     width: calc(100% - 20px);
-    
-    background-color: #1e4e66;
-    color: #fefefe;
+    background-color: var(--color-input);
+    color: var(--color-text-light);
     border-radius: 6px;
     overflow: hidden;
     font-size: 12px;
@@ -46,7 +45,7 @@
 }
 
 .Entry-Status-Vacation .icon{
-    fill: #000;
+    fill: var(--color-black);
 }
 
 .Entry-Status-Training {
