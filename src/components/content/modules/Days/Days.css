@@ -1,5 +1,5 @@
 
-.DayBox {
+.Days {
     width: auto;
     min-height: 140px;
     margin:0px;
@@ -9,7 +9,7 @@
     transition: 0.3s;
 }
 
-.DayBox-Head {
+.Days-Head {
     
     display: flex;
     align-items: center;
@@ -26,7 +26,7 @@
     opacity: var(--opacity-nofocuse);
 }
 
-.DayBox-MainContainer {
+.Days-MainContainer {
     width: 100%;
     padding-top: 10px;
     display: flex;
@@ -35,7 +35,7 @@
     flex-direction: column;
 }
 
-.DayBox-CurrentMonth{
+.Days-CurrentMonth{
     font-size: 13px;
     width: -webkit-fill-available;
     text-align: left;
@@ -53,7 +53,7 @@
     opacity: 1;
 }
 
-.CurrentDay .DayBox-CurrentMonth {
+.CurrentDay .Days-CurrentMonth {
     opacity:0;
 }
   
@@ -72,14 +72,14 @@
     transition: var(--transition-default);
 }
 
-.selected .DayBox-Head {
+.selected .Days-Head {
     font-weight: bold;
     transition: var(--transition-default);
 }
 
 .icon-addsmooth{
     fill: var(--color-text);
-    transition: 0.3s;
+    transition: var(--transition-default);
 }
 
 .icon-addsmooth:hover{

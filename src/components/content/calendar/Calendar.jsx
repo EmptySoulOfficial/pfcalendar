@@ -1,6 +1,6 @@
 import React, { Component, useMemo, useState } from "react";
 import "./Calendar.css";
-import DayBox from "../modules/DayBox/DayBox";
+import Days from "../modules/Days/Days";
 import { getLang, getLangVar } from "../../assets/js/ELanguage/ELanguage";
 import Icon from "../../assets/js/Icon/icon.asset";
 import AddBox from "../modules/AddBox/AddBox";
@@ -77,7 +77,7 @@ const Calendar = () => {
         </div>
         <div className="MainWindow-Calendar-Days-Container">
           <div className="MainWindow-Calendar-Days">
-          <DayBox day={currentDate} changeCurrentDay={changeCurrentDay} setshowAddBox={setshowAddBox}/>
+          <Days day={currentDate} changeCurrentDay={changeCurrentDay} setshowAddBox={setshowAddBox}/>
           </div>
         </div>
       </div>

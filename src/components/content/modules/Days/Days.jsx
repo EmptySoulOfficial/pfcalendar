@@ -1,12 +1,12 @@
-import "./DayBox.css";
+import "./Days.css";
 import { getLang, getLangVar } from "../../../assets/js/ELanguage/ELanguage";
 import Icon from "../../../assets/js/Icon/icon.asset";
 import Entry from "../Entry/Entry";
 import { getMonths } from "../../../assets/js/Months/Months.asset";
 import { useMemo, useState } from "react";
-import DayBoxItem from "./DayBoxItem";
+import DaysItem from "./DayItem";
 
-const DayBox = ({ day, changeCurrentDay, setshowAddBox }) => {
+const Days = ({ day, changeCurrentDay, setshowAddBox }) => {
 
   const firstDayOfMonth = useMemo(
     () => new Date(day.getFullYear(), day.getMonth(), 0),
@@ -55,7 +55,7 @@ const DayBox = ({ day, changeCurrentDay, setshowAddBox }) => {
   return (
     <>
       {currentDays.map((_day, index) => (
-       <DayBoxItem
+       <DaysItem
        key={index}
         _day={_day}
         changeCurrentDay={changeCurrentDay}
@@ -64,11 +64,11 @@ const DayBox = ({ day, changeCurrentDay, setshowAddBox }) => {
        >
        <Entry user={user} entryStatus={entryStatus} information={information} />
 
-       </DayBoxItem>
+       </DaysItem>
             
       ))}
     </>
   );
 };
 
-export default DayBox;
+export default Days;

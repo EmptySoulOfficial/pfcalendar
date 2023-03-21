@@ -10,7 +10,7 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 4px;
-    opacity: 0.3;
+    opacity: var(--opacity-nofocus);
 }
 .Entry-Name{
     padding-left: 8px;

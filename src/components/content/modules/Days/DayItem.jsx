@@ -1,4 +1,4 @@
-import "./DayBox.css";
+import "./Days.css";
 import { getLang, getLangVar } from "../../../assets/js/ELanguage/ELanguage";
 import Icon from "../../../assets/js/Icon/icon.asset";
 import Entry from "../Entry/Entry";
@@ -7,7 +7,7 @@ import { useMemo, memo } from "react";
 
 
 
-const DayBoxItem = ({ children, _day, changeCurrentDay, setshowAddBox }) => {
+const DaysItem = ({ children, _day, changeCurrentDay, setshowAddBox }) => {
 
 
     const months = useMemo(() => getMonths());
@@ -17,7 +17,7 @@ const DayBoxItem = ({ children, _day, changeCurrentDay, setshowAddBox }) => {
         <div
         key={'' + _day.Date}
         className={
-          "DayBox" +
+          "Days" +
           (_day.currentMonth ? " CurrentDay" : "") +
           (_day.selected
             ? _day.date.getFullYear() === currentDate.getFullYear() &&
@@ -29,7 +29,7 @@ const DayBoxItem = ({ children, _day, changeCurrentDay, setshowAddBox }) => {
         }
       >
         <div
-          className="DayBox-Head"
+          className="Days-Head"
           onClick={() => {
             changeCurrentDay(_day);
           }}
@@ -42,10 +42,10 @@ const DayBoxItem = ({ children, _day, changeCurrentDay, setshowAddBox }) => {
           >
             <Icon name="addsmooth" size="16" />
           </div>
-          <p className="DayBox-CurrentMonth">{months[_day.month]}</p>
+          <p className="Days-CurrentMonth">{months[_day.month]}</p>
           <p className="DateNumber">{_day.number}</p>
         </div>
-        <div className="DayBox-MainContainer">
+        <div className="Days-MainContainer">
           { children }
         </div>
       </div>
@@ -54,4 +54,4 @@ const DayBoxItem = ({ children, _day, changeCurrentDay, setshowAddBox }) => {
 
 }
 
-export default DayBoxItem;
+export default DaysItem;
