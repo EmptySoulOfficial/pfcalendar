@@ -1,0 +1,41 @@
+{
+    "Max33":{
+        "email": "Max33@gmail.com",
+        "vname": "Max",
+        "nname": "Mustermann",
+        "Entries": {
+            "02" :{
+                "13": {
+                    "EntryStatus": "Homeoffice",
+                    "EntryInformation": "Bin im Homeoffice"
+                },
+                "28": {
+                    "EntryStatus": "Absent",
+                    "EntryInformation": "Ich bin ab 12 Uhr nicht da (Artzttermin)"
+                }
+            }
+        }
+    },
+    "Steve":{
+        "email": "SteveArizona@gmail.com",
+        "vname": "Steve",
+        "nname": "Pietrowski",
+        "Entries": {
+            "02" :{
+                "20": {
+                    "EntryStatus": "Vacation",
+                    "EntryInformation": "Bin im Urlaub (bis 22)"
+                },
+                "21": {
+                    "EntryStatus": "Vacation",
+                    "EntryInformation": "Bin im Urlaub (bis 22)"
+                },
+                "22": {
+                    "EntryStatus": "Vacation",
+                    "EntryInformation": "Bin im Urlaub (bis 22)"
+                }
+                
+            }
+        }
+    }
+}

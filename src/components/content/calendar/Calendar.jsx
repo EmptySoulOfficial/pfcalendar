@@ -6,7 +6,7 @@ import Icon from "../../assets/js/Icon/icon.asset";
 import AddBox from "../modules/AddBox/AddBox";
 import { getMonths } from "../../assets/js/Months/Months.asset";
 
-const Calendar = () => {
+const Calendar = ({setcontexmenuItems,setshowEntryInformation, setEmployeeInformation}) => {
   const eLang = useMemo(() => getLang(), []);
   const months = useMemo(() => getMonths(), []);
   const weekdays = useMemo(() => [
@@ -27,7 +27,6 @@ const Calendar = () => {
 
   const handleSetNextDay = () => {
     setCurrentDate(new Date(currentDate.setDate(32)))
-
   };
 
   const handleSetPreviousDay = () => {
@@ -77,7 +76,7 @@ const Calendar = () => {
         </div>
         <div className="MainWindow-Calendar-Days-Container">
           <div className="MainWindow-Calendar-Days">
-          <Days day={currentDate} changeCurrentDay={changeCurrentDay} setshowAddBox={setshowAddBox}/>
+          <Days setEmployeeInformation={setEmployeeInformation} day={currentDate} changeCurrentDay={changeCurrentDay} setshowAddBox={setshowAddBox} setcontexmenuItems={setcontexmenuItems} setshowEntryInformation={setshowEntryInformation}/>
           </div>
         </div>
       </div>

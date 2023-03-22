@@ -1,0 +1,51 @@
+{
+    "entries" : 
+    {
+        "2" :{
+            "20": [
+                {
+                    "id": 1,
+                    "userId": 1313,
+                    "entryStatus": "Vacation",
+                    "entryInformation": "Bin im Urlaub (bis 22.03)"
+                },
+                {
+                    "id": 2,
+                    "userId": 1,
+                    "entryStatus": "Ill",
+                    "entryInformation": "Heute Krank"
+                }
+            ],
+            "21": [
+              {
+                  "id": 1,
+                  "userId": 1313,
+                  "entryStatus": "Vacation",
+                  "entryInformation": "Bin im Urlaub (bis 22.03)"
+              }
+          ],
+          "22": [
+            {
+                "id": 1,
+                "userId": 1313,
+                "entryStatus": "Vacation",
+                "entryInformation": "Bin im Urlaub (bis 22.03)"
+            }
+        ]
+        }
+    },
+    "employees": {
+      "1313": {
+        "firstName": "Steve",
+        "lastName": "Pietrowski",
+        "email": "test@test.com"
+      },
+      "2": {
+        "firstName": "test",
+        "lastName": "Nachname",
+        "email": "testNachname@test.com"
+      }
+    }
+    
+    
+}

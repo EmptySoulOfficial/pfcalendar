@@ -22,6 +22,7 @@
     --color-absent: var(--color-carrot);
 
     --borderradius-default: 20px;
+    --borderradius-small: 6px;
     --transition-default: 0.3s;
 
     --box-shadow-default: #00000024 -1px 18px 60px 5px;

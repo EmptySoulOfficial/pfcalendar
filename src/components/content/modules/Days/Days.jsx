@@ -5,8 +5,12 @@ import Entry from "../Entry/Entry";
 import { getMonths } from "../../../assets/js/Months/Months.asset";
 import { useMemo, useState } from "react";
 import DaysItem from "./DayItem";
+import { emplObj } from "../../../assets/js/EmployeeData/EmployeeData";
+import MapEntries from "./MapEntries";
 
-const Days = ({ day, changeCurrentDay, setshowAddBox }) => {
+const Days = ({ day, changeCurrentDay, setshowAddBox, setcontexmenuitems, setshowEntryInformation, setEmployeeInformation }) => {
+
+  const employeesObject = emplObj()
 
   const firstDayOfMonth = useMemo(
     () => new Date(day.getFullYear(), day.getMonth(), 0),
@@ -14,12 +18,6 @@ const Days = ({ day, changeCurrentDay, setshowAddBox }) => {
   );
 
   const [selectedDay, setSelectedDay] = useState(new Date());
-
-
-
-  let user = "Steve";
-  let entryStatus = "Homeoffice";
-  let information = "Ich bin ab 13 Uhr im Homeoffice";
 
   let weekdayOfFirstDay = firstDayOfMonth.getDay();
   const currentDays = useMemo(() => {
@@ -52,19 +50,18 @@ const Days = ({ day, changeCurrentDay, setshowAddBox }) => {
     return _currentDays;
   }, [day]);
 
+  let monthNumber = "02"
+  let dayNumber = "22"
+  const months = useMemo(() => getMonths());
+  
+
+
   return (
     <>
       {currentDays.map((_day, index) => (
-       <DaysItem
-       key={index}
-        _day={_day}
-        changeCurrentDay={changeCurrentDay}
-
-        setshowAddBox={setshowAddBox}
-       >
-       <Entry user={user} entryStatus={entryStatus} information={information} />
-
-       </DaysItem>
+        <DaysItem key={index} _day={_day} changeCurrentDay={changeCurrentDay} setshowAddBox={setshowAddBox}>
+          <MapEntries index={index} dayNumber={_day.number} monthNumber={_day.month} setcontexmenuitems={setcontexmenuitems} setshowEntryInformation={setshowEntryInformation} setEmployeeInformation={setEmployeeInformation} />
+        </DaysItem>
             
       ))}
     </>
