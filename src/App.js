@@ -19,7 +19,7 @@ function App() {
   const [showcontexmenu, setshowcontexmenu] = useState(false)
   const [showEntryInformation, setshowEntryInformation] = useState(false)
 
-  const [employeeInformation, setEmployeeInformation] = useState('No Information');
+  const [employeeInformation, setEmployeeInformation] = useState('');
 
   const [mousePos, setMousePos] = useState({});
 

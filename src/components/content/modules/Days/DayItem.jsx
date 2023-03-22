@@ -13,6 +13,10 @@ const DaysItem = ({ children, _day, changeCurrentDay, setshowAddBox }) => {
     const months = useMemo(() => getMonths());
     const currentDate = useMemo(() => new Date(), []);
 
+    if (children.length > 3){
+      console.log('-----zu lang')
+    }
+
     return (
         <div
         key={'' + _day.Date}
